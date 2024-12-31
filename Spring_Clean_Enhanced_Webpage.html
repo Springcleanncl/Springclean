@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Clean</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8d7e6;
+            color: #333;
+        }
+        header {
+            background-color: #f28db6;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 3em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav {
+            text-align: center;
+            background-color: #e47192;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services, .about, .contact {
+            margin-bottom: 50px;
+        }
+        .services h2, .about h2, .contact h2 {
+            text-align: center;
+            color: #e47192;
+        }
+        .services .service-item {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .services .service-item img {
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .services .service-item .description {
+            flex-grow: 1;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact form input, .contact form textarea, .contact form select, .contact form button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+        }
+        .contact form button {
+            background-color: #f28db6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact form button:hover {
+            background-color: #e47192;
+        }
+        footer {
+            text-align: center;
+            background-color: #f28db6;
+            color: white;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Spring Clean</h1>
+        <p>Making Your Home Sparkle!</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Spring Clean provides professional cleaning services tailored to your needs. Based in Newcastle, we take pride in offering quality service at an affordable price. Let us make your home sparkle!</p>
+        </section>
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/150" alt="One-Off Cleans">
+                <div class="description">
+                    <h3>One-Off Cleans</h3>
+                    <p>Perfect for those times when your home needs a quick refresh or a detailed clean before a special event. We'll leave your space spotless in no time.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/150" alt="General Cleans">
+                <div class="description">
+                    <h3>General Cleans</h3>
+                    <p>Our general cleaning service ensures your home stays clean and tidy on a regular basis. Enjoy a consistently fresh environment.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/150" alt="Deep Cleans">
+                <div class="description">
+                    <h3>Deep Cleans</h3>
+                    <p>We tackle the toughest cleaning tasks, reaching every nook and cranny for a thorough, top-to-bottom clean.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/150" alt="End of Tenancy Cleans">
+                <div class="description">
+                    <h3>End of Tenancy Cleans</h3>
+                    <p>Moving out? We'll help you leave the property spotless, ensuring you meet all tenancy requirements with ease.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Phone: 07383988440</p>
+            <p>Facebook: Spring Clean</p>
+            <p>Instagram: springcleanncl</p>
+            <h3>Online Booking</h3>
+            <form action="/submit_booking" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone" required>
+                <select name="service" required>
+                    <option value="">Select a Service</option>
+                    <option value="one-off">One-Off Cleans</option>
+                    <option value="general">General Cleans</option>
+                    <option value="deep">Deep Cleans</option>
+                    <option value="tenancy">End of Tenancy Cleans</option>
+                </select>
+                <textarea name="message" rows="5" placeholder="Additional Details"></textarea>
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Spring Clean. All rights reserved.</p>
+    </footer>
+</body>
+</html>
